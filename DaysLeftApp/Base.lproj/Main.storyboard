@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DaysLeftApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your birthday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ly-pc-6mF">
+                                <rect key="frame" x="103" y="224.33333333333334" width="222" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="xRs-SP-EIE">
+                                <rect key="frame" x="54" y="283.33333333333331" width="320" height="216"/>
+                                <locale key="locale" localeIdentifier="en_US"/>
+                                <connections>
+                                    <action selector="datePicker:" destination="BYZ-38-t0r" eventType="valueChanged" id="a7X-oa-txj"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORA-Nq-crL">
+                                <rect key="frame" x="154" y="519.33333333333337" width="120" height="50"/>
+                                <color key="backgroundColor" red="0.7119620026586051" green="0.37592769392869246" blue="0.94199810606060608" alpha="0.64132346854304634" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6Zp-dn-EcP"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="C4Z-sT-0rQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Result">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="resultButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="xsM-f0-5RV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You 're enjoying life already ... days" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xnW-OS-npu">
+                                <rect key="frame" x="70" y="609.33333333333337" width="288" height="52.666666666666629"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Umj-FP-YDR">
+                                <rect key="frame" x="46.666666666666657" y="127" width="334.66666666666674" height="67.333333333333314"/>
+                                <string key="text">How many days of life 
+have passed!</string>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                        <constraints>
+                            <constraint firstItem="8ly-pc-6mF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6xo-JV-pV3"/>
+                            <constraint firstItem="8ly-pc-6mF" firstAttribute="top" secondItem="Umj-FP-YDR" secondAttribute="bottom" constant="30" id="7yh-sc-mwu"/>
+                            <constraint firstItem="xRs-SP-EIE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9QR-ns-Ybo"/>
+                            <constraint firstItem="Umj-FP-YDR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="I29-nh-tE7"/>
+                            <constraint firstItem="ORA-Nq-crL" firstAttribute="top" secondItem="xRs-SP-EIE" secondAttribute="bottom" constant="20" id="IqL-Q6-15J"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xnW-OS-npu" secondAttribute="trailing" constant="70" id="PUa-9c-6Lz"/>
+                            <constraint firstItem="xRs-SP-EIE" firstAttribute="top" secondItem="8ly-pc-6mF" secondAttribute="bottom" constant="30" id="WEQ-Yl-4j6"/>
+                            <constraint firstItem="Umj-FP-YDR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aX7-6g-gEx"/>
+                            <constraint firstItem="Umj-FP-YDR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="pla-ZY-73u"/>
+                            <constraint firstItem="ORA-Nq-crL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xQh-L7-5d0"/>
+                            <constraint firstItem="xnW-OS-npu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="zRO-i9-dTd"/>
+                            <constraint firstItem="xnW-OS-npu" firstAttribute="top" secondItem="ORA-Nq-crL" secondAttribute="bottom" constant="40" id="zjm-af-alI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="xnW-OS-npu" id="9WS-mP-WNS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.98130841121494" y="3.8876889848812097"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
