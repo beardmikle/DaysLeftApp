@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         numberOfDays = range.formatted(.components(style: .wide, fields: [.day]))
         
         // my code
-        let vowels: Set<Character> = ["д", "н", "е", "й","и"]
+        let vowels: Set<Character> = ["д", "н", "е", "й","и" ,"я", "ь"]
         numberOfDays.removeAll(where: { vowels.contains($0) })
     }
     
